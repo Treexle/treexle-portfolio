@@ -35,3 +35,7 @@
   --depth: 1;
   --noise: 1;
 }
+
+* {
+  background-color: var(--color-base-200);
+}
