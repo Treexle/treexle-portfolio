@@ -1,6 +1,6 @@
 import "./index.css";
 import asciiArt from "../assets/treexle-ascii.txt?raw";
-import React, { useState } from "react";
+import { useState } from "react";
 
 type Position = { row: number; col: number };
 
@@ -65,14 +65,14 @@ function App() {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-300 rounded-2xl z-1 mt-3 w-52 p-2 shadow"
               >
                 <li>
                   <a>Item 1</a>
                 </li>
                 <li>
                   <a>Parent</a>
-                  <ul className="p-2 bg-base-100">
+                  <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
                     </li>
@@ -86,7 +86,7 @@ function App() {
                 </li>
               </ul>
             </div>
-            <a className=" btn-ghost text-xl text-green-500 font-mono font-bold hover:cursor-pointer">
+            <a className=" btn-ghost text-xl mx-3 text-emerald-500 font-mono font-bold duration-500 hover:cursor-pointer hover:scale-105">
               Treexle
             </a>
           </div>
@@ -95,12 +95,12 @@ function App() {
             {/* this ul is moved from navbar center */}
             <ul className="menu menu-horizontal px-1 mx-5 hidden lg:flex">
               <li>
-                <a>Item 1</a>
+                <a>About</a>
               </li>
               <li>
                 <details>
-                  <summary>Parent</summary>
-                  <ul className="p-2">
+                  <summary>Projects</summary>
+                  <ul className="p-2 bg-base-300 rounded-2xl absolute">
                     <li>
                       <a>Submenu 1</a>
                     </li>
@@ -110,16 +110,15 @@ function App() {
                   </ul>
                 </details>
               </li>
-              <li>
-                <a>Item 3</a>
-              </li>
             </ul>
-            <a className="btn">Button</a>
+            <a className="btn hover:border-emerald-300 transition-colors duration-300">
+              Contact
+            </a>
           </div>
         </nav>
-        <main className="size-[75vh] hero block justify-center items-center mx-auto p-5">
+        <main className="min-h-[75vh] -z-1 hero block justify-center items-center mx-auto p-5">
           <div className="hero-content flex-col">
-            <pre className="font-mono text-xl leading-none text-center whitespace-pre-wrap hover:cursor-pointer">
+            <pre className="font-mono text-xl leading-none text-center whitespace-pre-wrap mt-10 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
               {lines.map((line, rowIdx) => (
                 <div key={rowIdx} className="flex justify-center">
                   {line.split("").map((char, colIdx) => {
@@ -132,7 +131,7 @@ function App() {
                         onMouseEnter={() => handleHover(rowIdx, colIdx)}
                         onMouseLeave={clearHover}
                         className={`transition duration-150 ${
-                          isHighlighted ? "text-primary" : ""
+                          isHighlighted ? "text-emerald-400" : ""
                         }`}
                       >
                         {char === " " ? "\u00A0" : char}
@@ -145,12 +144,13 @@ function App() {
 
             <p className="font-mono text-center">
               Front-end Developer{" "}
-              <span className="text-green-400 font-bold">||</span> Game
+              <span className="text-emerald-400 font-bold">||</span> Game
               Developer
             </p>
           </div>
         </main>
-        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+        <footer className="footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
+          <p>"Hidup ****"</p>
           <nav>
             <div className="grid grid-flow-col gap-4">
               <a className="hover:text-primary hover:scale-125 hover:cursor-pointer transition-colors duration-200">
