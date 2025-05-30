@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <div className="font-default bg-base-200">
+      <div className="font-default min-w-screen bg-base-200">
         <nav className="navbar bg-base-100 shadow-sm sm:max-w-2/3 mx-auto rounded-b-2xl px-3">
           <div className="navbar-start">
             <div className="dropdown">
@@ -116,7 +116,7 @@ function App() {
             </a>
           </div>
         </nav>
-        <main className="min-h-[75vh] -z-1 hero block justify-center items-center mx-auto p-5">
+        <main className="min-h-[75vh] min-w-screen -z-1 hero block justify-center items-center mx-auto p-5">
           <div className="hero-content flex-col">
             <pre className="font-mono text-xl leading-none text-center whitespace-pre-wrap mt-10 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
               {lines.map((line, rowIdx) => (
@@ -149,6 +149,11 @@ function App() {
             </p>
           </div>
         </main>
+        <section className="container p-3 min-w-screen">
+          <div className="container min-w-full p-5 border-emerald-100 rounded-xl border-[0.2px] flex">
+            <h2 className="text-accent text-5xl font-sans font-bold ">About Me</h2>
+          </div>
+        </section>
         <footer className="footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
           <p>"Hidup ****"</p>
           <nav>
