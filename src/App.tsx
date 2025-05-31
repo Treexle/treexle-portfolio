@@ -35,6 +35,11 @@ function App() {
   return (
     <>
       <div className="w-full overflow-x-hidden font-default bg-base-200">
+        <p className="absolute top-1 left-1 md:hidden">sm</p>
+        <p className="absolute top-1 left-1 hidden md:block lg:hidden">md</p>
+        <p className="absolute top-1 left-1 hidden lg:block xl:hidden">lg</p>
+        <p className="absolute top-1 left-1 hidden xl:block 2xl:hidden">xl</p>
+        <p className="absolute top-1 left-1 hidden 2xl:block">2xl</p>
         <nav className="navbar bg-base-100 shadow-sm sm:max-w-2/3 mx-auto rounded-b-2xl px-3">
           <div className="navbar-start">
             <div className="dropdown">
@@ -111,30 +116,31 @@ function App() {
         </nav>
         <main className="min-h-[75vh] w-full -z-1 hero block justify-center items-center mx-auto p-5">
           <div className="hero-content flex-col mt-10">
-            <pre className="font-mono text-xl leading-none text-center whitespace-pre-wrap mb-3 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
-              {lines.map((line, rowIdx) => (
-                <div key={rowIdx} className="flex justify-center">
-                  {line.split("").map((char, colIdx) => {
-                    const isHighlighted = highlighted.has(
-                      `${rowIdx}-${colIdx}`
-                    );
-                    return (
-                      <span
-                        key={`${rowIdx}-${colIdx}`}
-                        onMouseEnter={() => handleHover(rowIdx, colIdx)}
-                        onMouseLeave={clearHover}
-                        className={`transition duration-150 ${
-                          isHighlighted ? "text-emerald-400" : ""
-                        }`}
-                      >
-                        {char === " " ? "\u00A0" : char}
-                      </span>
-                    );
-                  })}
-                </div>
-              ))}
-            </pre>
-
+            <div className="w-full max-w-full overflow-x-hidden px-2 sm:px-4 md:px-6">
+              <pre className="font-mono text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-none text-center whitespace-pre-wrap mb-3 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
+                {lines.map((line, rowIdx) => (
+                  <div key={rowIdx} className="flex justify-center">
+                    {line.split("").map((char, colIdx) => {
+                      const isHighlighted = highlighted.has(
+                        `${rowIdx}-${colIdx}`
+                      );
+                      return (
+                        <span
+                          key={`${rowIdx}-${colIdx}`}
+                          onMouseEnter={() => handleHover(rowIdx, colIdx)}
+                          onMouseLeave={clearHover}
+                          className={`transition duration-150 ${
+                            isHighlighted ? "text-emerald-400" : ""
+                          }`}
+                        >
+                          {char === " " ? "\u00A0" : char}
+                        </span>
+                      );
+                    })}
+                  </div>
+                ))}
+              </pre>
+            </div>
             <p className="font-mono text-center mt-3">
               Front-end Developer{" "}
               <span className="text-emerald-400 font-bold">||</span> Game
@@ -153,7 +159,7 @@ function App() {
           <p>"Hidup ****"</p>
           <nav>
             <div className="grid grid-flow-col gap-4">
-              <a className="hover:text-primary hover:scale-125 hover:cursor-pointer transition-colors duration-200">
+              <a className="hover:text-blue-400 hover:scale-125 hover:cursor-pointer transition-colors duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -164,7 +170,7 @@ function App() {
                   <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
                 </svg>
               </a>
-              <a className="hover:text-primary hover:scale-125 hover:cursor-pointer transition-colors duration-200">
+              <a className="hover:text-red-700 hover:scale-125 hover:cursor-pointer transition-colors duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -175,7 +181,7 @@ function App() {
                   <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
                 </svg>
               </a>
-              <a className="hover:text-primary hover:scale-125 hover:cursor-pointer transition-colors duration-200">
+              <a className="hover:text-blue-700 hover:scale-125 hover:cursor-pointer transition-colors duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
