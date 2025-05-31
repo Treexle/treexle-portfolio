@@ -12,22 +12,18 @@ function App() {
   const handleHover = (row: number, col: number) => {
     const neighbors: Position[] = [];
 
-    // Define a 5x5 surrounding area
     for (let r = row - 2; r <= row + 2; r++) {
       for (let c = col - 2; c <= col + 2; c++) {
-        // Skip out-of-bounds
         if (r >= 0 && r < lines.length && c >= 0 && c < lines[r]?.length) {
           neighbors.push({ row: r, col: c });
         }
       }
     }
 
-    // Shuffle and take a random number (e.g., 6-12 neighbors)
     const shuffled = neighbors.sort(() => Math.random() - 0.5);
-    const count = Math.floor(Math.random() * 7) + 6; // between 6–12
+    const count = Math.floor(Math.random() * 7) + 6;
     const selected = shuffled.slice(0, count);
 
-    // Store in Set
     const newHighlights = new Set(selected.map((p) => `${p.row}-${p.col}`));
     setHighlighted(newHighlights);
   };
@@ -38,7 +34,7 @@ function App() {
 
   return (
     <>
-      <div className="container font-default min-w-screen bg-base-200">
+      <div className="w-full overflow-x-hidden font-default bg-base-200">
         <nav className="navbar bg-base-100 shadow-sm sm:max-w-2/3 mx-auto rounded-b-2xl px-3">
           <div className="navbar-start">
             <div className="dropdown">
@@ -54,13 +50,12 @@ function App() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  {" "}
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M4 6h16M4 12h8m-8 6h16"
-                  />{" "}
+                  />
                 </svg>
               </div>
               <ul
@@ -90,9 +85,7 @@ function App() {
               Treexle
             </a>
           </div>
-          {/* <div className="navbar-center hidden lg:flex"></div> */}
           <div className="navbar-end">
-            {/* this ul is moved from navbar center */}
             <ul className="menu menu-horizontal px-1 mx-5 hidden lg:flex">
               <li>
                 <a>About</a>
@@ -116,7 +109,7 @@ function App() {
             </a>
           </div>
         </nav>
-        <main className="min-h-[75vh] min-w-full -z-1 hero block justify-center items-center mx-auto p-5">
+        <main className="min-h-[75vh] w-full -z-1 hero block justify-center items-center mx-auto p-5">
           <div className="hero-content flex-col mt-10">
             <pre className="font-mono text-xl leading-none text-center whitespace-pre-wrap mb-3 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
               {lines.map((line, rowIdx) => (
@@ -149,14 +142,14 @@ function App() {
             </p>
           </div>
         </main>
-        <section className="container p-3 min-w-screen">
-          <div className="container min-w-full p-5 outline outline-white/20 text-emerald-400 rounded-xl flex">
+        <section className="w-full p-3">
+          <div className="w-full p-5 outline outline-white/20 text-emerald-400 rounded-xl flex">
             <h2 className="text-accent text-5xl font-sans font-bold ">
               About Me
             </h2>
           </div>
         </section>
-        <footer className="min-w-full footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
+        <footer className="w-full footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
           <p>"Hidup ****"</p>
           <nav>
             <div className="grid grid-flow-col gap-4">
