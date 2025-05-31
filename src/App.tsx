@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <div className="font-default min-w-screen bg-base-200">
+      <div className="container font-default min-w-screen bg-base-200">
         <nav className="navbar bg-base-100 shadow-sm sm:max-w-2/3 mx-auto rounded-b-2xl px-3">
           <div className="navbar-start">
             <div className="dropdown">
@@ -116,9 +116,9 @@ function App() {
             </a>
           </div>
         </nav>
-        <main className="min-h-[75vh] min-w-screen -z-1 hero block justify-center items-center mx-auto p-5">
-          <div className="hero-content flex-col">
-            <pre className="font-mono text-xl leading-none text-center whitespace-pre-wrap mt-10 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
+        <main className="min-h-[75vh] min-w-full -z-1 hero block justify-center items-center mx-auto p-5">
+          <div className="hero-content flex-col mt-10">
+            <pre className="font-mono text-xl leading-none text-center whitespace-pre-wrap mb-3 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
               {lines.map((line, rowIdx) => (
                 <div key={rowIdx} className="flex justify-center">
                   {line.split("").map((char, colIdx) => {
@@ -142,7 +142,7 @@ function App() {
               ))}
             </pre>
 
-            <p className="font-mono text-center">
+            <p className="font-mono text-center mt-3">
               Front-end Developer{" "}
               <span className="text-emerald-400 font-bold">||</span> Game
               Developer
@@ -150,11 +150,13 @@ function App() {
           </div>
         </main>
         <section className="container p-3 min-w-screen">
-          <div className="container min-w-full p-5 border-emerald-100 rounded-xl border-[0.2px] flex">
-            <h2 className="text-accent text-5xl font-sans font-bold ">About Me</h2>
+          <div className="container min-w-full p-5 outline outline-white/20 text-emerald-400 rounded-xl flex">
+            <h2 className="text-accent text-5xl font-sans font-bold ">
+              About Me
+            </h2>
           </div>
         </section>
-        <footer className="footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
+        <footer className="min-w-full footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
           <p>"Hidup ****"</p>
           <nav>
             <div className="grid grid-flow-col gap-4">
