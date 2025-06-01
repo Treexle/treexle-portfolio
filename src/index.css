@@ -2,7 +2,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
 @plugin "daisyui/theme" {
   name: "tree";
   default: true;
@@ -38,8 +37,8 @@
   --noise: 0;
 }
 
-
 @theme {
   --font-default: "Roboto Mono", monospace;
   --font-mono: "Martian Mono", monospace;
+  --shadow-noblur: 9px 9px 0px rgba(217, 217, 217, 0.25);
 }
