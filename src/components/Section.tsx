@@ -1,6 +1,6 @@
 function Section() {
   return (
-    <section className="w-full h-[30rem] sm:h-[35rem] md:h-[40rem] p-4 bg-base-300 font-mono outline outline-white/10">
+    <section className="w-full min-h-[80vh] overflow-hidden p-4 bg-base-300 font-mono outline outline-white/10">
       {/* Container */}
       <div className="flex flex-col min-h-full md:flex-row justify-center items-center gap-6 md:gap-10 p-6 bg-base-200 outline outline-white/20 text-emerald-400 rounded-xl">
         {/* Left: Text */}
