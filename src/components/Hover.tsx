@@ -35,8 +35,8 @@ const Hover = () => {
   };
 
   return (
-    <main className="min-h-[75vh] w-full -z-1 hero block justify-center items-center mx-auto p-5">
-      <div className="hero-content flex-col mt-10">
+    <main className="min-h-144 w-full -z-1 hero block justify-center items-center mx-auto p-5">
+      <div className="hero-content flex flex-col mt-10 justify-center items-center">
         <div className="w-full max-w-full overflow-x-auto px-2 sm:px-4 md:px-6">
           <div className="inline-block min-w-full">
             <pre className="font-default text-[8px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-tight text-center whitespace-pre mb-3 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">

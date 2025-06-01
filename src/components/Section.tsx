@@ -1,8 +1,8 @@
 function Section() {
   return (
-    <section className="w-full min-h-[70vh] overflow-hidden p-4 bg-base-300 font-mono outline outline-white/10">
+    <section className="w-full min-h-120 overflow-hidden p-4 bg-base-300 font-mono outline outline-white/10">
       {/* Container */}
-      <div className="flex flex-col min-h-[70vh] md:flex-row justify-center items-center gap-6 md:gap-10 py-6 px-8 sm:px-16 bg-base-200 outline outline-white/20 text-emerald-400 rounded-xl">
+      <div className="flex flex-col min-h-120 md:flex-row justify-center items-center gap-6 md:gap-10 py-6 px-8 sm:px-16 bg-base-200 outline outline-white/20 text-emerald-400 rounded-xl">
         {/* Left: Text */}
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
