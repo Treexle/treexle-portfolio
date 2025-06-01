@@ -41,4 +41,5 @@
   --font-default: "Roboto Mono", monospace;
   --font-mono: "Martian Mono", monospace;
   --shadow-noblur: 9px 9px 0px rgba(217, 217, 217, 0.25);
+  --shadow-hover: 11px 11px 0px rgba(217, 217, 217, 0.25);
 }
