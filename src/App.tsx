@@ -35,14 +35,17 @@ function App() {
   return (
     <>
       <div className="w-full overflow-x-hidden font-default bg-base-200 sm:pt-2">
-        {/* breakpoint info */}
-        <p className="absolute top-1 left-1 md:hidden">sm</p>
-        <p className="absolute top-1 left-1 hidden md:block lg:hidden">md</p>
-        <p className="absolute top-1 left-1 hidden lg:block xl:hidden">lg</p>
-        <p className="absolute top-1 left-1 hidden xl:block 2xl:hidden">xl</p>
-        <p className="absolute top-1 left-1 hidden 2xl:block">2xl</p>
-        <nav className="navbar z-3 bg-base-100 shadow-sm mx-auto rounded-b-2xl sm:rounded-2xl sm:max-w-2/3 px-3">
-          <div className="navbar-start"> {/*navbar logo*/}
+        <div> {/*breakpoint info*/}
+          <p className="absolute top-1 left-1 md:hidden">sm</p>
+          <p className="absolute top-1 left-1 hidden md:block lg:hidden">md</p>
+          <p className="absolute top-1 left-1 hidden lg:block xl:hidden">lg</p>
+          <p className="absolute top-1 left-1 hidden xl:block 2xl:hidden">xl</p>
+          <p className="absolute top-1 left-1 hidden 2xl:block">2xl</p>
+        </div>
+        <nav className="navbar z-3 bg-base-100 shadow-sm mx-auto rounded-b-2xl sm:rounded-2xl sm:max-w-2/3 px-3"> {/*navbar*/}
+          <div className="navbar-start">
+            {" "}
+            {/*navbar logo*/}
             <div className="dropdown">
               <div
                 tabIndex={0}
@@ -91,7 +94,9 @@ function App() {
               Treexle
             </a>
           </div>
-          <div className="navbar-end"> {/*navbar menu*/}
+          <div className="navbar-end">
+            {" "}
+            {/*navbar menu*/}
             <ul className="menu menu-horizontal px-1 mx-5 hidden lg:flex">
               <li>
                 <a>About</a>
@@ -118,8 +123,8 @@ function App() {
         <main className="min-h-[75vh] w-full -z-1 hero block justify-center items-center mx-auto p-5">
           <div className="hero-content flex-col mt-10">
             <div className="w-full max-w-full overflow-x-hidden px-2 sm:px-4 md:px-6">
-              <pre className="font-mono text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-none text-center whitespace-pre-wrap mb-3 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
-                {lines.map((line, rowIdx) => (
+              <pre className="font-default text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-none text-center whitespace-pre-wrap mb-3 hover:cursor-pointer selection:bg-emerald-100 selection:text-emerald-500">
+                {lines.map((line, rowIdx) => ( //chars hover interaction
                   <div key={rowIdx} className="flex justify-center">
                     {line.split("").map((char, colIdx) => {
                       const isHighlighted = highlighted.has(
@@ -150,14 +155,14 @@ function App() {
           </div>
         </main>
         <section className="w-full p-3 bg-base-300 outline outline-white/10">
-          <div className="w-full p-5 bg-base-200 outline outline-white/20 text-emerald-400 rounded-xl flex">
-            <h2 className="text-accent text-5xl font-sans font-bold ">
+          <div className="w-full flex items-center justify-center p-5 bg-base-200 outline outline-white/20 text-emerald-400 rounded-xl">
+            <h2 className="text-emerald-400 text-5xl font-bold font-mono ">
               About Me
             </h2>
           </div>
         </section>
         <footer className="w-full footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
-          <p>"Hidup ****"</p>
+          <p>"Lorem Ipsum"</p>
           <nav>
             <div className="grid grid-flow-col gap-4">
               <a className="hover:text-blue-400 hover:scale-125 hover:cursor-pointer transition-colors duration-200">

@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
 @plugin "daisyui/theme" {
   name: "tree";
   default: true;
@@ -25,17 +26,18 @@
   --color-success-content: oklch(27% 0.072 132.109);
   --color-warning: oklch(85% 0.199 91.936);
   --color-warning-content: oklch(28% 0.066 53.813);
-  --color-error: oklch(71% 0.202 349.761);
+  --color-error: oklch(70% 0.191 22.216);
   --color-error-content: oklch(28% 0.109 3.907);
-  --radius-selector: 2rem;
-  --radius-field: 2rem;
-  --radius-box: 2rem;
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
   --border: 1px;
-  --depth: 1;
-  --noise: 1;
+  --depth: 0;
+  --noise: 0;
 }
+
 
 @theme {
   --font-default: "Roboto Mono", monospace;
