@@ -34,14 +34,15 @@ function App() {
 
   return (
     <>
-      <div className="w-full overflow-x-hidden font-default bg-base-200">
+      <div className="w-full overflow-x-hidden font-default bg-base-200 sm:pt-2">
+        {/* breakpoint info */}
         <p className="absolute top-1 left-1 md:hidden">sm</p>
         <p className="absolute top-1 left-1 hidden md:block lg:hidden">md</p>
         <p className="absolute top-1 left-1 hidden lg:block xl:hidden">lg</p>
         <p className="absolute top-1 left-1 hidden xl:block 2xl:hidden">xl</p>
         <p className="absolute top-1 left-1 hidden 2xl:block">2xl</p>
-        <nav className="navbar bg-base-100 shadow-sm sm:max-w-2/3 mx-auto rounded-b-2xl px-3">
-          <div className="navbar-start">
+        <nav className="navbar z-3 bg-base-100 shadow-sm mx-auto rounded-b-2xl sm:rounded-2xl sm:max-w-2/3 px-3">
+          <div className="navbar-start"> {/*navbar logo*/}
             <div className="dropdown">
               <div
                 tabIndex={0}
@@ -90,7 +91,7 @@ function App() {
               Treexle
             </a>
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end"> {/*navbar menu*/}
             <ul className="menu menu-horizontal px-1 mx-5 hidden lg:flex">
               <li>
                 <a>About</a>
@@ -148,8 +149,8 @@ function App() {
             </p>
           </div>
         </main>
-        <section className="w-full p-3">
-          <div className="w-full p-5 outline outline-white/20 text-emerald-400 rounded-xl flex">
+        <section className="w-full p-3 bg-base-300 outline outline-white/10">
+          <div className="w-full p-5 bg-base-200 outline outline-white/20 text-emerald-400 rounded-xl flex">
             <h2 className="text-accent text-5xl font-sans font-bold ">
               About Me
             </h2>
