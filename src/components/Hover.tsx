@@ -1,5 +1,5 @@
 import { useState } from "react";
-import asciiArt from "../../assets/treexle-ascii.txt?raw"; // Adjust the path as necessary
+import asciiArt from "../../assets/treexle-ascii.txt?raw";
 
 type Position = {
   row: number;
